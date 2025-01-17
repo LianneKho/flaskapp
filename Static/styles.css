@@ -1,0 +1,72 @@
+/* Algemene opmaak */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #93b7dc;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4facfe;
+    color: rgb(68, 6, 6);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigatie */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #003366;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(174, 188, 244);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container voor de hoofdsectie en de zijbalk */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Hoofdsectie */
+.main-section {
+    flex: 2;
+    background-color: rgb(175, 211, 216);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Zijbalk */
+.sidebar {
+    flex: 1;
+    background-color: #90c1e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: rgb(165, 170, 230);
+    text-align: center;
+    padding: 10px 0;
+}
