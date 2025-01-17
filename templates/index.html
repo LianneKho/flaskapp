@@ -3,43 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onboarding Portal - VisionCorp</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Onboarding - Your Company</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <div class="header-content">
-            <h1>VisionCorp Onboarding</h1>
-            <p>Empowering your first steps into the corporate world.</p>
+            <h1>Welcome to Your Company Onboarding</h1>
+            <p>Get started with our onboarding process and join us on our journey!</p>
         </div>
     </header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/progress">Progress Overview</a>
-        <a href="/videos">Training Videos</a>
-        <a href="/faq">FAQ</a>
-        <a href="/guides">Guides</a>
-    </nav>
-    <div class="container">
-        <!-- Main Section -->
-        <div class="main-section">
-            <h2>Welcome to VisionCorp</h2>
-            <p>Discover a world of possibilities as you embark on your onboarding journey. With VisionCorp, you have access to tailored training, personalized guides, and much more.</p>
-            <button onclick="window.location.href='/login';" class="btn-primary">Login</button>
-        </div>
 
+    <!-- Navigatie -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="main-content">
+        <div class="main-section">
+            <h2>Getting Started</h2>
+            <p>Learn the basics about your role and our company. Start your journey today!</p>
+            <a href="#" class="btn-primary">Start Now</a>
+        </div>
+        
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>News & Updates</h3>
+        <div class="sidebar">
+            <h3>Latest Updates</h3>
             <ul>
-                <li><a href="#">New employee orientation starts next Monday</a></li>
-                <li><a href="#">Tips for an effective onboarding experience</a></li>
-                <li><a href="#">Upcoming leadership webinar</a></li>
+                <li><a href="#">New Employee Training Video</a></li>
+                <li><a href="#">Upcoming Company Events</a></li>
+                <li><a href="#">Policy Updates</a></li>
             </ul>
-        </aside>
+        </div>
     </div>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 VisionCorp. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
