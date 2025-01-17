@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onboarding - Your Company</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css"/>
 <body>
 
     <!-- Header -->
@@ -18,10 +18,10 @@
     <!-- Navigatie -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#training">Training</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -32,16 +32,14 @@
             <p>Learn the basics about your role and our company. Start your journey today!</p>
             <a href="#" class="btn-primary">Start Now</a>
         </div>
-        
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>Latest Updates</h3>
-            <ul>
-                <li><a href="#">New Employee Training Video</a></li>
-                <li><a href="#">Upcoming Company Events</a></li>
-                <li><a href="#">Policy Updates</a></li>
-            </ul>
-        </div>
+
+        <!-- News Column -->
+        <aside class="news-column">
+            <h3>Latest News</h3>
+            <div class="news-item">New Employee Training Video</div>
+            <div class="news-item">Upcoming Company Events</div>
+            <div class="news-item">Policy Updates</div>
+        </aside>
     </div>
 
     <!-- Footer -->
