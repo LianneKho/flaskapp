@@ -1,40 +1,145 @@
+/* Algemene opmaak */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: #f0f4f8;
     color: #333;
 }
 
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header nav a {
-    color: #fff;
-    margin: 0 10px;
+header .header-content h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header .header-content p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+/* Navigatie */
+nav {
+    background: #003366;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Main Section */
+.main-section {
+    flex: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/600x400'); /* Placeholder */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.main-section h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: white;
+}
+
+.main-section .btn-primary {
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.main-section .btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #003366;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00f2fe;
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
-}
-
-form {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+footer a:hover {
+    text-decoration: underline;
 }

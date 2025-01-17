@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Onboarding Portal - VisionCorp</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
+        <div class="header-content">
+            <h1>VisionCorp Onboarding</h1>
+            <p>Empowering your first steps into the corporate world.</p>
+        </div>
     </header>
-    <main>
-        <p>This is the homepage.</p>
-    </main>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/progress">Progress Overview</a>
+        <a href="/videos">Training Videos</a>
+        <a href="/faq">FAQ</a>
+        <a href="/guides">Guides</a>
+    </nav>
+    <div class="container">
+        <!-- Main Section -->
+        <div class="main-section">
+            <h2>Welcome to VisionCorp</h2>
+            <p>Discover a world of possibilities as you embark on your onboarding journey. With VisionCorp, you have access to tailored training, personalized guides, and much more.</p>
+            <button onclick="window.location.href='/login';" class="btn-primary">Login</button>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>News & Updates</h3>
+            <ul>
+                <li><a href="#">New employee orientation starts next Monday</a></li>
+                <li><a href="#">Tips for an effective onboarding experience</a></li>
+                <li><a href="#">Upcoming leadership webinar</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>© 2025 VisionCorp. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
