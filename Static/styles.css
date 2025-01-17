@@ -1,72 +1,52 @@
-/* Algemene opmaak */
+/* Algemene stijlen */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #93b7dc;
-    color: #333;
+    background-color: #f4f4f9;
 }
 
 /* Header */
 header {
-    background-color: #4facfe;
-    color: rgb(68, 6, 6);
     text-align: center;
     padding: 20px;
+    background-color: #acedfa;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
 }
 
-/* Navigatie */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: #003366;
-}
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: rgb(174, 188, 244);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Container voor de hoofdsectie en de zijbalk */
-.container {
+/* Navigatieboxen-container */
+.navigation-boxes {
     display: flex;
-    margin: 20px;
-    gap: 20px;
-}
-
-/* Hoofdsectie */
-.main-section {
-    flex: 2;
-    background-color: rgb(175, 211, 216);
+    justify-content: center; /* Centraal uitgelijnd */
+    gap: 20px; /* Ruimte tussen de vakjes */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
-/* Zijbalk */
-.sidebar {
-    flex: 1;
-    background-color: #90c1e0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: rgb(165, 170, 230);
+/* Navigatieboxen */
+.nav-box {
+    flex: 1; /* Gelijke breedte voor alle boxen */
+    max-width: 150px; /* Maximale breedte van elke box */
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-box:hover {
+    background-color: #acedfa; /* Highlight-kleur */
+    color: white;
+    transform: translateY(-5px); /* Laat de box "optillen" */
+}
+
+/* Hoofdinhoud */
+.main-content {
+    padding: 20px;
+    text-align: center;
 }
