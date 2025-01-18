@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    
     <header>
         <h1>Contact Us</h1>
     </header>
+    <div class="navigation-boxes">
+        <a href="/" class="nav-box button">Home</a>
+        <a href="/FAQ" class="nav-box button">FAQ</a>
+        <a href="/login" class="nav-box button">Login</a>
+        <a href="/contact" class="nav-box button">Contact</a>
+    </div>
+
     <main>
         <form action="/contact" method="post">
             <div>
