@@ -50,3 +50,44 @@ header {
     padding: 20px;
     text-align: center;
 }
+/* Stijl voor de container die de knoppen bevat */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Zorgt dat de knoppen verdeeld worden */
+    padding: 10px;
+    margin: 20px auto; /* Centraal uitlijnen met auto */
+    max-width: 80%; /* Beperkt de breedte van de container */
+    box-sizing: border-box;
+}
+
+/* Stijl voor de knoppen */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: white; /* Tekstkleur */
+    background-color: #007BFF; /* Primaire kleur */
+    border-radius: 5px; /* Maak knoppen rond */
+    font-size: 16px;
+    text-align: center;
+    flex-grow: 1; /* Laat knoppen gelijkmatig groeien */
+    transition: background-color 0.3s ease; /* Animatie bij hover */
+}
+
+/* Hover-effect voor de knoppen */
+.button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Standaard responsieve gedrag: maak knoppen volledig breed op kleine schermen */
+@media screen and (max-width: 600px) {
+    .button-container {
+        flex-direction: column; /* Onder elkaar zetten */
+    }
+
+    .button {
+        margin: 5px 0; /* Spacing tussen knoppen */
+    }
+}
