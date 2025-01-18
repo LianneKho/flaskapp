@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-
+import os
+print("Static folder:", os.path.abspath('static'))
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 @app.route('/')
