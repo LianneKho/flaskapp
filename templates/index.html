@@ -11,36 +11,69 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <h1>Welcome to Your Company Onboarding</h1>
-            <p>Get started with our onboarding process and join us on our journey!</p>
+            <h1>Your Company</h1>
+            <p>Empowering employees for a brighter future.</p>
         </div>
     </header>
 
     <!-- Navigatie -->
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
 
-    <div class="navigation-boxes">
-        <a href="/" class="nav-box button">Home</a>
-        <a href="/FAQ" class="nav-box button">FAQ</a>
-        <a href="/login" class="nav-box button">Login</a>
-        <a href="/contact" class="nav-box button">Contact</a>
-    </div>
 
-    <!-- Main Section -->
-    <div class="main-content">
-        <div class="main-section">
-            <h2>Getting Started</h2>
-            <p>Learn the basics about your role and our company. Start your journey today!</p>
-            <a href="#" class="btn-primary">Start Now</a>
-        </div>
+    </nav>
 
-        <!-- News Column -->
-        <aside class="news-column">
-            <h3>Latest News</h3>
-            <div class="news-item">New Employee Training Video</div>
-            <div class="news-item">Upcoming Company Events</div>
-            <div class="news-item">Policy Updates</div>
-        </aside>
-    </div>
+    <!-- Hoofdinhoud -->
+    <main class="main-content">
+        <!-- Introductie -->
+        <section class="intro">
+            <h2>Welcome to Our Onboarding Platform</h2>
+            <p>Discover the tools, resources, and guidance to get you started on your journey with us.</p>
+            <a href="{{ url_for('login') }}" class="btn-primary">Get Started</a>
+        </section>
+        <!-- Introductievideo -->
+        <section class="intro-video">
+            <div class="video-container">
+                <video controls>
+                    <source src="{{ url_for('static', filename='images/Whello.mp4') }}" type="video/mp4">
+                    Je browser ondersteunt de video-tag niet.
+                </video>
+            </div>
+            <div class="video-text">
+                <h2>Introductie Video</h2>
+                <p>Welkom bij Your Company! In deze korte video laten we je kennismaken met onze missie, cultuur en hoe je een succesvolle start kunt maken in je nieuwe rol. Ontdek hoe we samenwerken om innovatie te stimuleren en groei te omarmen.</p>
+            </div>
+        </section>
+        <!-- Bedrijfsinformatie en nieuws -->
+        <section class="info-and-news">
+            <!-- Bedrijfsinformatie -->
+            <div class="info">
+                <h3>About Us</h3>
+                <p>At Your Company, we value innovation, collaboration, and growth. Our team is dedicated to providing you with the best onboarding experience possible.</p>
+            </div>
+
+            <!-- Nieuws -->
+            <div class="news">
+                <h3>Latest News</h3>
+                <ul>
+                    <li>🚀 New training modules now available.</li>
+                    <li>🎉 Join us for our annual company retreat.</li>
+                    <li>📅 Don’t miss our next webinar on team building!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Afbeeldingen -->
+        <section class="image-section">
+            <img src="{{ url_for('static', filename='images/teamwork2x.jpg') }}" alt="Teamwork">
+            <img src="{{ url_for('static', filename='images/office5.jpg') }}" alt="Office Environment">
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>

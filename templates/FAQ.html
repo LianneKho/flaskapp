@@ -3,39 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Your Company</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>FAQ - Onboarding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+
     <header>
-        <h1>FAQ - Frequently Asked Questions</h1>
+        <h1>Frequently Asked Questions (FAQ)</h1>
     </header>
-    <div class="navigation-boxes">
-        <a href="/" class="nav-box button">Home</a>
-        <a href="/FAQ" class="nav-box button">FAQ</a>
-        <a href="/login" class="nav-box button">Login</a>
-        <a href="/contact" class="nav-box button">Contact</a>
-    </div>
+    
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link active">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+    </nav>
 
     <main>
         <section class="faq-section">
+            <h2>Welcome to the Onboarding FAQ</h2>
+            <p>Here you’ll find answers to some of the most common questions that new employees ask. If you have any additional questions, feel free to contact your manager or HR.</p>
+
             <div class="faq-item">
-                <h2 class="faq-question">What is the onboarding process?</h2>
-                <p class="faq-answer">The onboarding process introduces you to our company, policies, and tools. You'll gain all the knowledge needed to succeed in your role.</p>
+                <h3>1. What should I bring on my first day?</h3>
+                <p>On your first day, please bring a valid ID, any documents or forms that were requested in your onboarding package, and a positive attitude! You’ll be provided with all the necessary materials once you arrive.</p>
             </div>
+
             <div class="faq-item">
-                <h2 class="faq-question">How can I access my training materials?</h2>
-                <p class="faq-answer">You can access your training materials by logging into the onboarding portal and navigating to the "Training" section.</p>
+                <h3>2. How do I set up my company email?</h3>
+                <p>Your company email will be created for you before your first day. You will receive login details during your onboarding session, including instructions on how to set it up and access it securely.</p>
             </div>
+
             <div class="faq-item">
-                <h2 class="faq-question">Who can I contact for support?</h2>
-                <p class="faq-answer">You can reach out to your assigned mentor or use the contact form in the portal for additional support.</p>
+                <h3>3. What is the dress code for the office?</h3>
+                <p>We have a business-casual dress code at the office. Please wear comfortable yet professional clothing. If you’re unsure about what to wear, feel free to ask your supervisor or HR for guidance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>4. How do I get access to the company’s software and tools?</h3>
+                <p>During your onboarding, you’ll be provided with access to all the tools you’ll need to succeed, including software installations and login credentials. IT will guide you through the setup process.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>5. Who can I contact if I have technical issues?</h3>
+                <p>If you encounter any technical issues with your equipment or software, please reach out to the IT department. They can assist you with troubleshooting or direct you to the appropriate support channels.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>6. Where can I find the employee handbook?</h3>
+                <p>The employee handbook is available online in your portal. You can access it at any time for information on company policies, benefits, and other important details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>7. How do I request time off?</h3>
+                <p>To request time off, simply use the company’s time-off management system. Your supervisor will approve or decline the request, and the HR department will finalize it.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>8. Can I work from home?</h3>
+                <p>Our company supports a flexible work policy. Depending on your role, you may be eligible for remote work. Speak with your supervisor to determine your options for working from home.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>9. What should I do if I need help adjusting to the company?</h3>
+                <p>If you need any help or have questions about adjusting to the company, don’t hesitate to ask for assistance. Your supervisor, HR, and team members are here to support you during your transition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>10. How can I connect with other employees?</h3>
+                <p>We encourage employees to join company social events, teams, and interest groups to connect with others. Our company culture emphasizes collaboration and team-building.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <p>&copy; 2025 Your Company. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>

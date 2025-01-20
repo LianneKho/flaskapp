@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1>Login</h1>
+    </header>
+
+<!-- Navigatie -->
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+
+
+    </nav>
+
+    <div class="centered-header">
+        <h1>Welcome, {{ username }}</h1>
+        <p>Your Onboarding Progress</p>
+    </div>
+    
+    <main class="main-content">
+        <section>
+            <h2>Progress Overview</h2>
+            <div class="progress-bar">
+                <div id="progress" class="progress" style="width: 0%;">0% Complete</div>
+            </div>
+            <p id="progress-text">You're just getting started. Keep it up!</p>
+        </section>
+    
+        <!-- To-Do List -->
+        <section>
+            <h3>To-Do</h3>
+            <ul id="todo-list">
+                <li>Watch the "Introduction to Company Culture" video.</li>
+                <li>Complete the "Workplace Safety" exam.</li>
+                <li>Complete the "Workplace Privacy" exam.</li>
+                <li>Set up three goals for the first quarter.</li>
+                <li>Plan a meeting with your supervisor.</li>
+                <li>Plan a meeting with your buddy.</li>
+                <li>Review your first week.</li>
+                <li>Go to an work event.</li>
+                <li>Submit your onboarding feedback form.</li>
+            </ul>
+        </section>
+    
+        <!-- Done List -->
+        <section>
+            <h3>Done</h3>
+            <ul id="done-list">
+                <!-- Completed tasks will be moved here -->
+            </ul>
+        </section>
+    
+        <!-- Mark as Done / Undone Button -->
+        <section>
+            <button id="mark-done" class="btn-primary">Done</button>
+            <button id="mark-undone" class="btn-primary">Not done</button>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+    
+    <script>
+        const totalTasks = document.querySelectorAll('#todo-list li').length; // Aantal taken in de To-Do lijst
+        const progressText = document.getElementById('progress-text');
+        const progressBar = document.getElementById('progress');
+        
+        // Functie om de voortgangsbalk bij te werken
+        function updateProgress() {
+            const doneItems = document.querySelectorAll('#done-list li').length; // Aantal voltooide taken
+            const percentage = Math.round((doneItems / totalTasks) * 100);
+            progressBar.style.width = percentage + '%';
+            progressBar.textContent = percentage + '% Complete';
+            
+            if (percentage === 100) {
+                progressText.textContent = "You've completed all tasks! Great job!";
+            } else {
+                progressText.textContent = "You're " + percentage + "% complete. Keep it up!";
+            }
+        }
+
+        // Functie om een taak als voltooid te markeren
+        document.getElementById('mark-done').addEventListener('click', function() {
+            const todoList = document.getElementById('todo-list');
+            const doneList = document.getElementById('done-list');
+            
+            // Zoek de geselecteerde taak in de To-Do lijst
+            const selectedTask = todoList.querySelector('li.selected');
+            
+            if (selectedTask) {
+                // Verplaats de taak naar de Done lijst
+                doneList.appendChild(selectedTask);
+                selectedTask.classList.remove('selected'); // Verwijder de selectie
+                
+                // Sla de done-taken op in localStorage
+                saveProgress();
+                updateProgress(); // Update de voortgangsbalk
+            }
+        });
+
+        // Functie om een taak als onvoltooid te markeren
+        document.getElementById('mark-undone').addEventListener('click', function() {
+            const doneList = document.getElementById('done-list');
+            const todoList = document.getElementById('todo-list');
+            
+            // Zoek de geselecteerde taak in de Done lijst
+            const selectedTask = doneList.querySelector('li.selected');
+            
+            if (selectedTask) {
+                // Verplaats de taak naar de To-Do lijst
+                todoList.appendChild(selectedTask);
+                selectedTask.classList.remove('selected'); // Verwijder de selectie
+                selectedTask.classList.remove('selected-undo'); // Verwijder de undone markering
+
+                // Sla de undone-taken op in localStorage
+                saveProgress();
+                updateProgress(); // Update de voortgangsbalk
+            }
+        });
+        
+        // Voeg een click event listener toe om taken te selecteren
+        const todoItems = document.querySelectorAll('#todo-list li');
+        const doneItems = document.querySelectorAll('#done-list li');
+        
+        // Toevoegen van selectie functionaliteit voor beide lijsten
+        [...todoItems, ...doneItems].forEach(item => {
+            item.addEventListener('click', function() {
+                item.classList.toggle('selected'); // Toggle selectie
+            });
+        });
+
+        // Functie om de voortgang op te slaan in localStorage
+        function saveProgress() {
+            const doneTasks = [];
+            const doneListItems = document.querySelectorAll('#done-list li');
+            doneListItems.forEach(item => {
+                doneTasks.push(item.textContent);
+            });
+            localStorage.setItem('doneTasks', JSON.stringify(doneTasks));
+        }
+
+        // Functie om de voortgang in te laden uit localStorage
+        function loadProgress() {
+            const doneTasks = JSON.parse(localStorage.getItem('doneTasks')) || [];
+            doneTasks.forEach(task => {
+                const todoList = document.getElementById('todo-list');
+                const taskItems = todoList.querySelectorAll('li');
+                taskItems.forEach(item => {
+                    if (item.textContent === task) {
+                        const doneList = document.getElementById('done-list');
+                        doneList.appendChild(item);
+                    }
+                });
+            });
+            updateProgress();
+        }
+
+        // Initialiseer de voortgang bij het laden van de pagina
+        window.onload = function() {
+            loadProgress();
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+</body>
+</html>

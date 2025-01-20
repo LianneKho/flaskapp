@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1>Training videos</h1>
+    </header>
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+
+    </nav>
+
+        <div class="training-section">
+            <!-- Eerste video en tekst -->
+            <div class="video-container">
+                <video controls>
+                    <source src="static/images/Security.mp4" type="video/mp4">
+                    Je browser ondersteunt geen HTML5 video.
+                </video>
+            </div>
+            <div class="training-text">
+                <h2>Workplace Safety</h2>
+                <ul>
+                    <li>Workplace safety is a shared commitment. We want to ensure a secure and healthy environment for everyone. From identifying potential hazards to fostering a culture of safety awareness, these principles empower us to work together to prevent accidents and maintain well-being. Watch and discover how small actions can make a big impact on creating a safer workplace for all.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="training-section">
+            <!-- Tweede video en tekst -->
+            <div class="video-container">
+                <video controls>
+                    <source src="static/images/OfficeSafetyTips.mp4" type="video/mp4">
+                    Je browser ondersteunt geen HTML5 video.
+                </video>
+            </div>
+            <div class="training-text">
+                <h2>Safety for you and others</h2>
+                <ul>
+                    <li>At Your Company, we prioritize the safety and well-being of our employees above all else. Our health and safety policies are designed to create a secure and supportive work environment, empowering you to thrive while maintaining a focus on personal and collective safety. Ensuring everyone’s physical and mental health remains a top priority. Stay safe, stay healthy—because you matter. </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="training-section">
+            <!-- Derde video en tekst -->
+            <div class="video-container">
+                <video controls>
+                    <source src="static/images/bullying.mp4" type="video/mp4">
+                    Je browser ondersteunt geen HTML5 video.
+                </video>
+            </div>
+            <div class="training-text">
+                <h2>Workplace bullying</h2>
+                <ul>
+                    <li>Clear and effective communication is the cornerstone of a productive and harmonious workplace. We want everyone to feel heard and understood. Together we can build stronger connections, reduce misunderstandings, and create an environment where ideas and teamwork thrive.</li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>
+    <footer>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+</body>
+</html>

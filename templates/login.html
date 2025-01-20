@@ -11,19 +11,44 @@
     <header>
         <h1>Login</h1>
     </header>
-    <div class="navigation-boxes">
-        <a href="/" class="nav-box button">Home</a>
-        <a href="/FAQ" class="nav-box button">FAQ</a>
-        <a href="/login" class="nav-box button">Login</a>
-        <a href="/contact" class="nav-box button">Contact</a>
-    </div>
-    <main>
-        <form action="/login" method="post">
+
+<!-- Navigatie -->
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+
+    </nav>
+    <main class="main-content">
+
+        <div class="login-message">
+            <p> You can find your login details in your E-mail</p> <!-- Centraal geplaatste tekst -->
+        </div>
+
+        <form method="POST" class="form">
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
     </main>
-
+<body>
     <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
     </footer>
-
+</body>
+</html>
+    <footer>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
 </body>
 </html>
