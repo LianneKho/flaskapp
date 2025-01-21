@@ -68,6 +68,8 @@
             <button id="mark-undone" class="btn-primary">Not done</button>
         </section>
     </main>
+
+
     
     <script>
         const totalTasks = document.querySelectorAll('#todo-list li').length; // Aantal taken in de To-Do lijst
@@ -171,6 +173,7 @@
     </script>
 
     <footer>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
         <p>&copy; 2025 Your Company</p>
     </footer>
 </body>
