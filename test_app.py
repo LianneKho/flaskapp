@@ -97,10 +97,13 @@ class FlaskAppTestCase(unittest.TestCase):
         """
         Test of de contactpagina succesvol laadt.
         """
-        response = self.app.get('/contact')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'contact', response.data)  # Controleer op een relevante term
+        # Log de gebruiker in
+        self.app.post('/login', data={'username': 'emp1', 'password': 'password123'})
 
+        # Bezoek de contactpagina
+        response = self.app.get('/contact')
+        self.assertEqual(response.status_code, 200)  # Controleer of de pagina laadt
+        self.assertIn(b'contact', response.data)  # Controleer op een relevante term in de contactpagina
     def test_logout(self):
         """
         Test de logout-functionaliteit.

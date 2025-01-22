@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Mentors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Meet Our Mentors</h1>
+    </header>
+
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Progress</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+        <a href="/mentor" class="nav-link">Meet our mentors</a>
+
+    </nav>
+
+    <main class="mentor-main">
+        <section class="mentor-container">
+            <h2>Our Expert Mentors</h2>
+
+            <!-- Mentor 1 -->
+            <div class="mentor-card">
+                <img src="{{ url_for('static', filename='images/pic2.jpg') }}" class="mentor-img">
+                <div class="mentor-info">
+                    <h3>John Doe</h3>
+                    <p><strong>Role:</strong> HR Manager</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>About:</strong> John has over 10 years of experience in human resources, specializing in employee development and organizational growth.</p>
+                </div>
+            </div>
+
+            <!-- Mentor 2 -->
+            <div class="mentor-card">
+                <img src="{{ url_for('static', filename='images/pic3.jpg') }}" class="mentor-img">
+                <div class="mentor-info">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Role:</strong> IT Specialist</p>
+                    <p><strong>Email:</strong> jane.smith@example.com</p>
+                    <p><strong>About:</strong> Jane is an expert in IT infrastructure with a passion for streamlining business technology solutions.</p>
+                </div>
+            </div>
+
+            <!-- Mentor 3 -->
+            <div class="mentor-card">
+                <img src="{{ url_for('static', filename='images/pic1.jpg') }}" class="mentor-img">
+                <div class="mentor-info">
+                    <h3>Emma Jones</h3>
+                    <p><strong>Role:</strong> Sales Lead</p>
+                    <p><strong>Email:</strong> emma.jones@example.com</p>
+                    <p><strong>About:</strong> Emma has a proven track record in sales leadership, helping organizations build strong customer relationships.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+</body>
+</html>

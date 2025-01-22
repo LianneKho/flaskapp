@@ -25,6 +25,18 @@ def validate_user(username, password):
     user = cursor.fetchone()
     connection.close()
     return user is not None
+def create_user_table():
+    connection = sqlite3.connect('users.db')
+    cursor = connection.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT NOT NULL UNIQUE,
+            password TEXT NOT NULL
+        )
+    ''')
+    connection.commit()
+    connection.close()
 
 # Functie om nieuwe gebruikers toe te voegen
 def add_user(username, password):
@@ -107,6 +119,28 @@ def contact():
     # Als de gebruiker ingelogd is, toon de contactpagina
     return render_template('contact.html')
 # training route
+
+# Voorbeeld van mentorinformatie
+departments = {
+    'hr': [
+        {'name': 'John Doe', 'email': 'john.doe@example.com', 'image': 'path-to-image-1.jpg', 'bio': 'John has over 10 years of experience in human resources...'}
+    ],
+    'it': [
+        {'name': 'Jane Smith', 'email': 'jane.smith@example.com', 'image': 'path-to-image-2.jpg', 'bio': 'Jane is an expert in IT infrastructure...'}
+    ],
+    'sales': [
+        {'name': 'Emma Jones', 'email': 'emma.jones@example.com', 'image': 'path-to-image-3.jpg', 'bio': 'Emma has a proven track record in sales...'}
+    ]
+}
+
+@app.route('/mentor')
+def mentor():
+    if is_logged_in():
+        # Als de gebruiker ingelogd is, render dan de mentorpagina met de mentorinformatie
+        return render_template('mentor.html', departments=departments, username=session['username'])
+    else:
+        # Als de gebruiker niet ingelogd is, stuur ze dan naar de loginpagina
+        return redirect(url_for('login', next=request.url))
 @app.route('/training')
 def training():
     if is_logged_in():
@@ -160,4 +194,5 @@ def register():
 
     return render_template('register.html')
 if __name__ == "__main__":
+    create_user_table()  # Zorg ervoor dat de tabel bestaat
     app.run(debug=True, host='0.0.0.0', port=8080)
