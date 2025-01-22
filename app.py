@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import os
 import sqlite3
 from datetime import timedelta
-
+port = int(os.environ.get("PORT", 5001))
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 app.secret_key = os.urandom(24)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)  # Sessie duurt 7 dagen
@@ -25,18 +25,6 @@ def validate_user(username, password):
     user = cursor.fetchone()
     connection.close()
     return user is not None
-def create_user_table():
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
-        )
-    ''')
-    connection.commit()
-    connection.close()
 
 # Functie om nieuwe gebruikers toe te voegen
 def add_user(username, password):
@@ -194,5 +182,4 @@ def register():
 
     return render_template('register.html')
 if __name__ == "__main__":
-    create_user_table()  # Zorg ervoor dat de tabel bestaat
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=5001)
