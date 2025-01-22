@@ -22,15 +22,7 @@
                 <img src="{{ url_for('static', filename='images/TeamBuilding.jpg') }}" alt="Office">
                 <img src="{{ url_for('static', filename='images/cafe_werk.jpg') }}" alt="Basketball" >
         </section>
-        <section>
-            <h2>Participants</h2>
-            <p>Here are the users who have registered for this event:</p>
-            <ul>
-                {% for participant in participants %}
-                    <li>{{ participant[0] }} ({{ participant[1] }})</li>
-                {% endfor %}
-            </ul>
-        </section>
+
     </main>
 
     <footer class="footer">
