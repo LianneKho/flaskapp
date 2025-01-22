@@ -15,7 +15,7 @@
     <nav class="navigation">
         <a href="/" class="nav-link">Home</a>
         <a href="/FAQ" class="nav-link active">FAQ</a>
-        <a href="/login" class="nav-link">Login</a>
+        <a href="/login" class="nav-link">Progress</a>
         <a href="/contact" class="nav-link">Contact</a>
         <a href="/training" class="nav-link">Training</a>
         <a href="/events" class="nav-link">Events</a>
@@ -79,7 +79,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
     </footer>
 
 </body>

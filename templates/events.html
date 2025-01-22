@@ -13,14 +13,15 @@
         <div class="header-content">
             <h1>Events in 2025</h1>
             <p>Join us for an unforgettable experience of learning, innovation, and networking!</p>
-            <a href="#register" class="btn-primary">Register Now</a>
+            <p>Please let us know if you're coming, at the bottom of the page!</p>
+
         </div>
     </header>
     
     <nav class="navigation">
         <a href="/" class="nav-link">Home</a>
         <a href="/FAQ" class="nav-link active">FAQ</a>
-        <a href="/login" class="nav-link">Login</a>
+        <a href="/login" class="nav-link">Progress</a>
         <a href="/contact" class="nav-link">Contact</a>
         <a href="/training" class="nav-link">Training</a>
         <a href="/events" class="nav-link">Events</a>
@@ -36,7 +37,7 @@
             </div>
             <div class="info-item">
                 <h3>Location</h3>
-                <p>Downtown Conference Center, City Name</p>
+                <p>Downtown Conference Center, Rotterdam</p>
             </div>
             <div class="info-item">
                 <h3>Speakers</h3>
@@ -54,45 +55,78 @@
         <h2>Event Schedule</h2>
         <div class="schedule">
             <div class="schedule-item">
-                <h3>9:00 AM - 10:30 AM</h3>
-                <p>Opening Keynote: "The Future of Innovation"</p>
+                <h1>Warm welcome with coffees</h1>
+                <h3>9:00 AM - 10:00 AM</h3>
+                <p>Get to know your fellow newcomers</p>
             </div>
             <div class="schedule-item">
-                <h3>10:30 AM - 12:00 PM</h3>
-                <p>Workshop: "Design Thinking in Action"</p>
+                <h1>Introduction to the company</h1>
+                <h3>10:00 AM - 10:30 PM</h3>
+                <p>Get to know the company’s mission, values, and key services</p>
             </div>
             <div class="schedule-item">
-                <h3>12:00 PM - 1:00 PM</h3>
-                <p>Lunch Break</p>
+                <h1>Office tour</h1>
+                <h3>10:30 AM - 11:30 PM</h3>
+                <p>A guided tour of the office, familiarize yourself with the facilities</p>
             </div>
             <div class="schedule-item">
-                <h3>1:00 PM - 3:00 PM</h3>
-                <p>Panel Discussion: "Tech Trends 2025"</p>
+                <h1>Get to know your new colleagues!</h1>
+                <h3>11:30 PM - 1:00 PM</h3>
+                <p>Enjoy your lunch provided by us</p>
             </div>
             <div class="schedule-item">
-                <h3>3:00 PM - 5:00 PM</h3>
-                <p>Networking & Closing Remarks</p>
+                <h1>HR and Administration Overview </h1>
+                <h3>1:00 PM - 2:00 PM</h3>
+                <p>An overview of our HR policies, benefits and administrative processes</p>
+            </div>
+            <div class="schedule-item">
+                <h1>Team icebreakers</h1>
+                <h3>2:00 PM - 3:30 PM</h3>
+                <p>Fun activities to help you get to know your new team and build connections</p>
+            </div>
+            <div class="schedule-item">
+                <h1>Management Q&A</h1>
+                <h3>3:30 PM - 4:00 PM</h3>
+                <p>Meet our leadership team and ask questions about the company’s vision, culture, and future plans</p>
+            </div>
+            <div class="schedule-item">
+                <h1>Happy Hour to end the day</h1>
+                <h3>4:00 PM - 5:00 PM</h3>
+                <p>Relax and unwind with colleagues as we wrap up the day with some drinks</p>
             </div>
         </div>
     </section>
 
+        <!-- Next Event Section -->
+    <section class="next-event">
+        <h2>Upcoming Event</h2>
+        <div class="next-event-info">
+            <h1>Meet & mingle</h1>
+            <p>Date: March 15, 2025 - 5:30 AM to 8:00 PM</p>
+            <p>Location: Downtown Bar, Rotterdam</p>
+            <p>More information coming soon!</p>
+
+        </div>
+    </section>
     <!-- Registration Section -->
-    <section id="register" class="register-section">
-        <h2>Register Now</h2>
-        <form action="/submit_registration" method="post" class="registration-form">
+    <section class="register-section">
+        <div style="text-align: center; margin: 30px 0;">
+        <h2> I will be there!</h2>
+        <form action="/eventssuccesful" method="post" class="registration-form">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
 
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-            <button type="submit">Register</button>
+            <button type="submit">Register for Event</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
     </footer>
 
 </body>

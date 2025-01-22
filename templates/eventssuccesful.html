@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Registration Successful</h1>
+            <p>Thank you! You have successfully registered for the event.</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="/events" class="btn-modern">Go Back to Events</a>
+        </div>
+        <section class="image-section">
+                <img src="{{ url_for('static', filename='images/TeamBuilding.jpg') }}" alt="Office">
+                <img src="{{ url_for('static', filename='images/cafe_werk.jpg') }}" alt="Basketball" >
+        </section>
+        <section>
+            <h2>Participants</h2>
+            <p>Here are the users who have registered for this event:</p>
+            <ul>
+                {% for participant in participants %}
+                    <li>{{ participant[0] }} ({{ participant[1] }})</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+</body>
+</html>

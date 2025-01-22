@@ -78,7 +78,7 @@ header p {
 .btn-primary {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #747373;
+    background-color: #7798ec;
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
@@ -87,7 +87,7 @@ header p {
 }
 
 .btn-primary:hover {
-    background-color: #747373;
+    background-color: #1754f1;
 }
 /* Sectie voor introductievideo */
 .intro-video {
@@ -509,7 +509,26 @@ ul {
 ul li {
     margin-bottom: 5px;
 }
+.btn-modern {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1d1d1f; /* Donkere, stijlvolle kleur */
+    color: #ffffff; /* Witte tekst */
+    border: 1px solid transparent; /* Geen rand in normale toestand */
+    border-radius: 5px; /* Subtiele afgeronde hoeken */
+    text-decoration: none; /* Geen onderstreping */
+    font-size: 1.1rem; /* Iets grotere tekstgrootte */
+    font-weight: 600; /* Bold text voor een premium look */
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Soepel overgangseffect */
+}
 
+.btn-modern:hover {
+    background-color: #ffffff; /* Witte achtergrond bij hover */
+    color: #1d1d1f; /* Donkere tekst bij hover */
+    border: 1px solid #1d1d1f; /* Donkere rand */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtiele schaduw bij hover */
+}
 /* Event Schedule */
 .event-schedule {
     background-color: #f9f9f9;
@@ -528,7 +547,15 @@ ul li {
     gap: 20px;
     margin-top: 30px;
 }
-
+/* Next Event Section */
+.next-event {
+    background-color: #f5f5f5; /* Lichte achtergrondkleur om het te onderscheiden */
+    padding: 50px 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 .schedule-item {
     background-color: white;
     padding: 20px;
@@ -538,20 +565,21 @@ ul li {
 
 .schedule-item h3 {
     font-size: 1.5rem;
-    color: #ff6f61;
+    color: #7798ec;
     margin-bottom: 10px;
 }
 
 .schedule-item p {
     font-size: 1.1rem;
 }
-
-/* Registratie Formulier */
-.register-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #ffffff;
+/* Image Section */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Ruimte tussen de afbeeldingen */
 }
+
 
 .register-section h2 {
     font-size: 2.5rem;
@@ -582,7 +610,7 @@ ul li {
 
 .registration-form button {
     padding: 12px 24px;
-    background-color: #ff6f61;
+    background-color: #7798ec;
     color: white;
     border: none;
     border-radius: 30px;
@@ -592,7 +620,7 @@ ul li {
 }
 
 .registration-form button:hover {
-    background-color: #e25b51;
+    background-color: #1754f1;
 }
 /* Footer */
 footer {

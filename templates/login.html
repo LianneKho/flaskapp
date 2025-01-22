@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Progress</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     
     <header>
-        <h1>Login</h1>
+        <h1>Progress</h1>
     </header>
 
 <!-- Navigatie -->
     <nav class="navigation">
         <a href="/" class="nav-link">Home</a>
         <a href="/FAQ" class="nav-link">FAQ</a>
-        <a href="/login" class="nav-link">Login</a>
+        <a href="/login" class="nav-link">Progress</a>
         <a href="/contact" class="nav-link">Contact</a>
         <a href="/training" class="nav-link">Training</a>
         <a href="/events" class="nav-link">Events</a>
 
     </nav>
     <main class="main-content">
-
-        <div class="login-message">
-            <p> You can find your login details in your E-mail</p> <!-- Centraal geplaatste tekst -->
-        </div>
 
         <form method="POST" class="form">
             {% if error %}
@@ -40,14 +36,14 @@
 
             <button type="submit" class="btn-primary">Login</button>
         </form>
+    <!-- Voeg een link toe naar de registratiepagina -->
+        <div class="login-message">
+            <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+        </div>
     </main>
 <body>
     <footer>
         <a href="{{ url_for('logout') }}" class="button">Logout</a>
-    </footer>
-</body>
-</html>
-    <footer>
         <p>&copy; 2025 Your Company</p>
     </footer>
 </body>

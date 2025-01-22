@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Your Company</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Your Company</h1>
+            <p>Empowering employees for a brighter future.</p>
+        </div>
+    </header>
+
+    <!-- Navigatie -->
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+    </nav>
+
+    <!-- Hoofdinhoud -->
+    <main class="main-content">
+        <!-- Registratieformulier -->
+        <div class="intro">
+            <h1> Create Your Account</h1> <!-- Centraal geplaatste tekst -->
+            <p>Sign up to get started with Your Company. Please fill in the details below:</p>
+        </div>
+        <form method="POST" class="form">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required placeholder="Enter username">
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" required placeholder="Enter password">
+
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+        <!-- Na de registratieformulier, voeg dit toe voor de succesmelding -->
+        {% if success_message %}
+            <p style="color: green;">{{ success_message }}</p>
+        {% endif %}
+            {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+
+</body>
+</html>

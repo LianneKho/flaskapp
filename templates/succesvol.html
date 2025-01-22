@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent Successfully</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Message Sent Successfully</h1>
+    </header>
+
+    <nav class="navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQ" class="nav-link">FAQ</a>
+        <a href="/login" class="nav-link">Progress</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/training" class="nav-link">Training</a>
+        <a href="/events" class="nav-link">Events</a>
+    </nav>
+
+    <main class="main-content">
+
+        <div class="login-message">Your message has been sent successfully! We will get back to you shortly.</p>
+
+        </div>
+
+        <div>
+            <a href="/contact">
+                <button type="submit" class="btn-primary">Send another message</button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+</body>
+</html>
