@@ -9,3 +9,6 @@ It holds information on mentors, upcoming events which you can sign up for so th
 it has training videos which i would like to connect with test in the future, this way it's easy and all in one place.
 It also has an FAQ page and a page to contact somebody for all you questons, this way it's easy to ask for help.
 
+i've used javascript, CSS and HTML to keep it user friendly but also get the design i wanted
+i wanted a simple but chique design that would be user friendly, so it can easily be changed depanding on the company.
+i've also used python and flask for the database and authentication 
